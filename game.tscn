@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2t1hkcxl5qw1"]
+
+[ext_resource type="PackedScene" uid="uid://dxjhr1dmftc0p" path="res://player/player.tscn" id="1_80nbo"]
+[ext_resource type="Texture2D" uid="uid://bos7rridjkps1" path="res://level/checkboard.png" id="1_e2o6t"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_80nbo"]
+albedo_color = Color(0.9214332, 0.50657123, 0.13750622, 1)
+albedo_texture = ExtResource("1_e2o6t")
+uv1_triplanar = true
+
+[sub_resource type="Environment" id="Environment_80nbo"]
+background_mode = 1
+background_color = Color(0.24397382, 0.7180413, 0.915013, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.7303301, 0.6848367, 0.6708308, 1)
+tonemap_mode = 2
+fog_enabled = true
+fog_light_color = Color(0.1980767, 0.4668867, 0.7090245, 1)
+fog_density = 0.0055
+fog_height = -0.04
+fog_height_density = 0.3521
+
+[node name="Game" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
+use_collision = true
+size = Vector3(10, 10, 10)
+material = SubResource("StandardMaterial3D_80nbo")
+
+[node name="Player" parent="." instance=ExtResource("1_80nbo")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.41678858, 0.90900344, 0, -0.90900344, 0.41678858, 0, 5.7731895, 2.5312405)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_80nbo")

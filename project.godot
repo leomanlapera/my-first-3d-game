@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="My First 3D Game"
-run/main_scene="uid://dp7sxe5xl5shk"
+run/main_scene="uid://c2t1hkcxl5qw1"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 

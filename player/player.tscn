@@ -18,7 +18,7 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 
 [node name="gun_model" parent="Camera3D" instance=ExtResource("1_oul6g")]
-transform = Transform3D(-0.4756867, 0, -4.1585853e-08, 0, 0.4756867, 0, 4.1585853e-08, 0, -0.4756867, 0.66587204, -0.25907302, -0.7334442)
+transform = Transform3D(-0.4756867, 0, -4.1585853e-08, 0, 0.4756867, 0, 4.1585853e-08, 0, -0.4756867, 0.65522665, -0.30905032, -0.7334442)
 
 [node name="Reticle" type="TextureRect" parent="."]
 anchors_preset = 8
